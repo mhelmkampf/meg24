@@ -1,16 +1,16 @@
 ### =========================================================================###
 ### Marine Ecological Genetics 2024                                          ###
-### 02. Hardy-Weinberg equilibrium practical                                 ###
+### 02. Hardy-Weinberg equilibrium | computer practical                      ###
 ### ======================================================================== ###
 
 
 ### Preparations and notes
 
 # Set working directory to the location of this script
-# e.g. using the "Files" tab in the bottom right panel
-# Check your working directory in the console with getwd()
+# e.g. by using the "Files" tab in the bottom right panel.
+# You can check your working directory in the console with getwd()
 
-# Solutions and hints at bottom of page
+# Solutions and hints can be found at the bottom of the page
 
 
 
@@ -19,20 +19,34 @@
 
 ### What are the frequencies of the yellow and blue alleles?
 
-y <- # ...
-b <- # ...
+n <- 10                        # number of individuals
+y <- ((6 * 2) + 1) / (n * 2)   # frequency of yellow allele
+# b <- ...
 
 
 ### What are the expected genotype frequencies?
 
-yy_exp <- # ...
+# yy_exp <- ...
+# ...
 
 
 ### Is the population in Hardy-Weinberg equilibrium?
-  
 
-### What is the fixation index?
+# This can be tested using Pearson's Chi-squared test
+help(chisq.test)
 
+# First, we need to enter our data into a matrix
+genotypes <- data.frame(row.names = c("yy", "yb", "bb"),
+                        "N_observed" = c(6, 1, 3),
+                        "freq_expected" = c(yy_exp, yb_exp, bb_exp)
+)
+
+# Then we can run the test
+# chisq.test(...)
+
+
+### What is the fixation index and what does it tell us?
+# F_is <- ...
 
 
 ### ============================================================================
@@ -119,9 +133,7 @@ genotypes <- data.frame(row.names = c("yy", "yb", "bb"),
 
 
 ### Perform Pearson's chi-squared test of goodness of fit
-help(chisq.test)
-
-test <- chisq.test(dat$observed, p = dat$expected)
+test <- chisq.test(genotypes$N_observed, p = genotypes$freq_expected)
 test
 pchisq(test$statistic, df = 1, lower.tail = FALSE)   # recalculate p with 1 degree of freedom
 
