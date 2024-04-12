@@ -49,6 +49,7 @@ genotypes <- data.frame(row.names = c("yy", "yb", "bb"),
 # F_is <- ...
 
 
+
 ### ============================================================================
 ### Exercise 2: Genepop format
 
@@ -101,9 +102,6 @@ test_HW("data/puella_barbados.txt", outputFile = "HW_barbados.txt")
 
 
 ### What patterns can you identify regarding loci and populations?
-
-
-
 
 
 
