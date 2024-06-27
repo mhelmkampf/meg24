@@ -62,7 +62,7 @@ library(pegas)
 
 ### Read in data from Genepop format file
 help(read.genepop)
-yellowblue <- read.genepop("data/yellow_blue.gen", ncode = 1)
+yellowblue <- read.genepop("data/popgen/yellow_blue.gen", ncode = 1)
 
 
 ### Access data in the new genind object
@@ -81,7 +81,7 @@ hw.test(yellowblue)
 ### Exercise 3: Microsatellite data of Caribbean reef fish populations
 
 ### Read in data from Genepop format file
-barbados <- read.genepop("data/puella_barbados.gen", ncode = 3)
+barbados <- read.genepop("data/popgen/puella_barbados.gen", ncode = 3)
 barbados
 
 
@@ -95,10 +95,10 @@ barbados
 install.packages("genepop")
 library(genepop)
 
-test_HW("data/puella_barbados.txt", outputFile = "HW_barbados.txt")
+test_HW("data/popgen/puella_barbados.txt", outputFile = "HW_barbados.txt")
 
 
-### Load and test all Caribbean populations (file data/puella_caribbean.gen)
+### Load and test all Caribbean populations (file data/popgen/puella_caribbean.gen)
 
 
 ### What patterns can you identify regarding loci and populations?
@@ -162,6 +162,6 @@ hw.test(barbados)
 
 
 ### Load and test all Caribbean populations
-caribbean <- read.genepop("data/puella_caribbean.gen", ncode = 3)
-test_HW("data/puella_caribbean.txt", outputFile = "HW_caribbean.txt")
+caribbean <- read.genepop("data/popgen/puella_caribbean.gen", ncode = 3)
+test_HW("data/popgen/puella_caribbean.txt", outputFile = "HW_caribbean.txt")
 hw.test(caribbean)
