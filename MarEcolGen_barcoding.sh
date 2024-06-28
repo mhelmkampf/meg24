@@ -86,7 +86,7 @@
 
 
 ### ============================================================================
-### Bonus material: identify barcode / species with BLAST and the NCBI nt database
+### Alternative: identify barcode / species with BLAST and the NCBI nt database
 
 # https://blast.ncbi.nlm.nih.gov/Blast.cgi
 # Select Nucleotide BLAST, Nucleotide collection (nr/nt), megablast
