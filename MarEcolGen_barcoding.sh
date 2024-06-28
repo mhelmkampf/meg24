@@ -6,15 +6,10 @@
 
 ### Preparations
 
-# On Windows, install and launch BioEdit
-# Zipped installation file provided in meg24/apps
-# Or download from https://bioedit.software.informer.com/
-
-# On Mac, launch 4Peaks
-# Executable provided in meg24/apps
-
-# Copy a pair of trace files of your choice to meg24/work
+# Copy a pair of trace / text files of your choice
+# from meg24/data/barcoding to meg24/work
 # seq_*F.ab1 and seq_*R.ab1
+# seq_*F.txt and seq_*R.txt
 
 
 ### ============================================================================
@@ -35,16 +30,16 @@
 
 ### View trace files
 
-# Open your trace files in BioEdit (Windows) or 4Peaks (Mac)
-# Note that each sample was sequenced in forward (F) and reverse (R) direction
+# http://yosttools.genetics.utah.edu/PolyPeakParser/
+# Activate "Show Trimmed Region"
 # How many positions at the beginning (5') and end (3') look unreliable?
 
 
 ### Trim low quality 5' and 3' positions
 
-# BioEdit: select range of positions to keep, copy selection (Ctrl + C) to plain text file
-# 4Peaks: select range of positions to keep, crop (Cmd + K) and export as plain text file
-# Save as seq_*F.tr, seq_*R.tr
+# Adjust the 5' and 3' Trim
+# Manually remove the corresponding 5' and 3' positions in the text files,
+# using a text editor of your choice, and save
 
 
 ### Reverse complement trimmed R sequence
